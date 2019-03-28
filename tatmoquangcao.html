@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tắt hoặc mở quảng cáo</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+	    #container{
+	    	position: fixed;
+	    }
+		#tatqc , #moqc{
+			background: teal;
+
+		}
+		#moqc{
+			display: none;
+		}
+		a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="tatqc">
+			<a href="" onClick="hide()">Tắt quảng cáo</a>
+		</div>
+		<div id="picqc">
+			<a href="">
+				<img src="anh1.JPG">
+			</a>
+			
+		</div>
+		<div id="moqc">
+			<a href="" onClick="show()">Mở quảng cáo</a>
+		</div>
+	</div>
+	
+    <script>
+    	function hide() {
+    		document.getElementById("tatqc").style.display="none";
+    		document.getElementById("picqc").style.display="none";
+    		document.getElementById("moqc").style.display="block";
+
+    	}
+    	function show() {
+    		document.getElementById("tatqc").style.display="block";
+    		document.getElementById("picqc").style.display="block";
+    		document.getElementById("moqc").style.display="none";
+
+    	}
+    </script>
+</body>
+</html>
