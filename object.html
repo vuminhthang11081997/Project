@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div id="ob1">
         <p>
@@ -14,12 +16,25 @@
                 ob.foo
             }}
         </p>
-        <input type="text" v-model="text" >
-        <button v-on:click="ob.foo += text">
+        <input type="text" v-model="text">
+        <button v-on:click="ob.foo = text">
             Cập nhật!
         </button>
         <input v-model="ob.foo">
     </div>
+    <p>Sử dụng cú pháp mustache: {{ rawHtml }}</p>
+    <p>Sử dụng directive v-html: <span v-html="rawHtml" ></span></p>
+    <p>Giá trị của isButtonDisable:</p>
+    <input type="text" v-model="text">
+    <button v-on:click="ob.foo+=text">
+        kích hoạt
+    </button>
+    <button v-bind:disabled="isButtonDisabled">
+hòng vọng phu
+    </button>
+    <span v-blind:tittle="message">ẩn ẩn</span>
+    
     <script src="object1.js"></script>
 </body>
+
 </html>

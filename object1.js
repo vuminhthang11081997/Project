@@ -1,13 +1,16 @@
-var ob={
-    foo:'var'
+var ob = {
+    foo: 'true'
 }
 
-var object=new Vue({
-    el:'#ob1',
-    data:{
+var object = new Vue({
+    el: '#ob1',
+    data: {
+        seen:true,
         text: '',
-       ob
+        ob,
+        
     }
-    
+
 })
+object.message='test'
 
